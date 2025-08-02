@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corte Rápido</title>
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="./assets/icon.png">
 </head>
+
 <body>
 
     <div class="social-bar">
@@ -31,7 +34,7 @@
         </a>
         <ul class="nav-links">
             <li><a href="#">Home:</a></li>
-            <li><a href="#">Serviços:</a></li>
+            <li><a href="#servicos">Serviços:</a></li>
             <li><a href="#">Sobre Nós:</a></li>
             <li><a href="#">Contato:</a></li>
         </ul>
@@ -45,8 +48,39 @@
         </div>
     </section>
 
-    <section class="servicos">
-
+    <section class="servicos" id="servicos">
+        <div class="servicos-wrapper">
+            <div class="servicos-container">
+                <ul>
+                    <li><img src="./assets/cut1.png" alt="Corte de cabelo"></li>
+                    <li><img src="./assets/cut2.png" alt="Corte de barba"></li>
+                    <li><img src="./assets/cut3.png" alt="Corte de cabelo e barba"></li>
+                    <li><img src="./assets/cut4.png" alt="Corte de cabelo e barba"></li>
+                </ul>
+                <div class="servicos-descricao">
+                    <h2>CORTES DE CABELO:</h2>
+                    <p>Atendemos todos os estilos e tipos de cabelo, seja liso, cacheado, crespo ou ondulado, curto ou
+                        longo. Nossos barbeiros são especializados em cortes personalizados para realçar o seu visual com
+                        precisão e estilo.</p>
+                </div>
+            </div>
+            <div class="servicos-container">
+                <img src="./assets/cut5.png" alt="barba">
+                <div class="servicos-descricao">
+                    <h2>BARBA:</h2>
+                    <p>Cuidamos da sua barba com precisão e estilo! Seja para um acabamento alinhado, um design marcante ou
+                        um barbear completo, atendemos todos os tipos de barba – curta, longa, cheia ou rala – garantindo um
+                        visual impecável e bem cuidado.</p>
+                </div>
+            </div>
+            <div class="servicos-container">
+                <img src="./assets/cut6.png" alt="cabelo e barba">
+                <div class="servicos-descricao">
+                    <h2>HIDRATAÇÃO CAPILAR:</h2>
+                    <p>A hidratação capilar repõe os nutrientes e a umidade natural dos fios, evitando o ressecamento e deixando o cabelo mais macio, saudável e fácil de modelar. Ideal para todos os tipos de cabelo, principalmente os que sofrem com exposição ao sol, uso frequente de bonés ou produtos químicos.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="sobrenos">
@@ -61,4 +95,5 @@
     </footer>
 
 </body>
+
 </html>
