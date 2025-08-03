@@ -344,13 +344,17 @@ header {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    height: 80vh;
+    min-height: 600px;
 }
 
 .contato-content {
     position: relative;
     width: 100%;
+    height: 100%;
     display: flex;
+    align-items: center;
 }
 
 .banner2 {
@@ -362,30 +366,35 @@ header {
     object-fit: cover;
     z-index: 1;
 }
-.banner2 img{
-    width: 100%;
-    height: 100%;
-}
+
 .form {
     display: flex;
     z-index: 2;
     flex-direction: column;
     gap: 10px;
-    max-width: 350px;
-    background-color: #979797;
-    padding: 20px;
+    width: 560px;
+    filter: grayscale(80%);
+    background-color: rgba(221, 221, 221, 0.8); /* branco com transparência */
+    padding: 40px;
     border-radius: 10px;
     position: relative;
+    margin-left: 100px;
+    backdrop-filter: blur(5px); /* opcional: efeito de desfoque do fundo */
   }
- 
+  
+ .form h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+ }
   .form label {
     position: relative;
   }
   
   .form label .input {
     width: 100%;
-    padding: 10px 10px 20px 10px;
+    padding: 15px 15px 20px 15px;
     outline: 0;
+    font-family:'Montserrat', sans-serif;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 5px;
   }
@@ -398,6 +407,7 @@ header {
     font-size: 0.9em;
     cursor: text;
     transition: 0.3s ease;
+    pointer-events: none;
   }
   
   .form label .input:placeholder-shown + span {
@@ -406,7 +416,7 @@ header {
   }
   
   .form label .input:focus + span,.form label .input:valid + span {
-    top: 30px;
+    top: 35px;
     font-size: 0.7em;
     font-weight: 600;
   }
@@ -415,18 +425,47 @@ header {
     color: green;
   }
   
+  /* Estilos específicos para o campo de email */
+  .form label .email-input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+    pointer-events: none;
+  }
+  
+ 
+  .form label .email-input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .email-input:focus + span,.form label .input:valid + span {
+    top: 35px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .email-input:valid + span {
+    color: green;
+  }
   .input01 {
     width: 100%;
-    padding: 10px 10px 20px 10px;
+    padding: 20px 20px 30px 20px;
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 5px;
+    resize: vertical;
   }
   
   .form label .input01 + span {
     position: absolute;
     left: 10px;
-    top: 50px;
+    top: -15px;
+    margin-bottom: 100px;
     color: grey;
     font-size: 0.9em;
     cursor: text;
@@ -434,12 +473,12 @@ header {
   }
   
   .form label .input01:placeholder-shown + span {
-    top: 40px;
+    top: 90px;
     font-size: 0.9em;
   }
   
   .form label .input01:focus + span,.form label .input01:valid + span {
-    top: 50px;
+    top:100px;
     font-size: 0.7em;
     font-weight: 600;
   }
@@ -461,7 +500,7 @@ header {
     margin: 0;
     outline: none;
     overflow: visible;
-    padding: 8px 30px;
+    padding: 15px 50px;
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -530,7 +569,7 @@ header {
   
   .fancy:hover {
     color: white;
-    background: #cacaca;
+    background: #3a3a3a;
   }
   
   .fancy:hover::before {
@@ -556,6 +595,19 @@ header {
 /********************************************....................CONTATO.....................*************************************************/
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .form {
+        width: 500px;
+        margin-left: 80px;
+        padding: 35px;
+    }
+    
+    .form h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .social-icons {
         padding: 0 1rem;
@@ -662,11 +714,66 @@ header {
         max-width: 400px;
     }
 
-    .sobrenos span {
-        font-size: 1rem;
-        text-align: center;
-    }
-}
+         .sobrenos span {
+         font-size: 1rem;
+         text-align: center;
+     }
+     
+     /* Responsivo para Contato - Tablet */
+     .contato {
+         height: 75vh;
+         min-height: 550px;
+         padding: 30px 0;
+     }
+     
+     .form {
+         margin-left: 50px;
+         width: 450px;
+         padding: 30px;
+     }
+     
+     .form h2 {
+         font-size: 1.8rem;
+         margin-bottom: 25px;
+     }
+     
+     .form label .input {
+         padding: 18px 18px 25px 18px;
+         font-size: 15px;
+     }
+     
+     .form label .input:focus + span,
+     .form label .input:valid + span {
+         top: 40px;
+         font-size: 0.65em;
+     }
+     
+     .form label .email-input:focus + span,
+     .form label .email-input:valid + span {
+         top: 40px;
+         font-size: 0.65em;
+     }
+     
+     .input01 {
+         padding: 18px 18px 28px 18px;
+         font-size: 15px;
+     }
+     
+     .form label .input01:placeholder-shown + span {
+         top: 85px;
+     }
+     
+     .form label .input01:focus + span,
+     .form label .input01:valid + span {
+         top: 95px;
+         font-size: 0.65em;
+     }
+     
+     .fancy {
+         padding: 14px 40px;
+         font-size: 14px;
+     }
+ }
 
 @media (max-width: 480px) {
     .social-bar {
@@ -770,4 +877,69 @@ header {
         font-size: 0.9rem;
         line-height: 1.6;
     }
-}
+
+         /* Responsivo para Contato - Mobile pequeno */
+     .contato {
+         height: 70vh;
+         min-height: 500px;
+         padding: 20px 0;
+         justify-content: center;
+     }
+ 
+     .form {
+         margin-left: 0;
+         max-width: 300px;
+         padding: 15px;
+         width: 90%;
+     }
+     
+     .form h2 {
+         font-size: 1.5rem;
+         margin-bottom: 20px;
+     }
+     
+     .form label .input {
+         padding: 12px 12px 18px 12px;
+         font-size: 14px;
+     }
+     
+     .form label .input + span {
+         font-size: 0.8em;
+     }
+     
+     .form label .input:focus + span,
+     .form label .input:valid + span {
+         top: 30px;
+         font-size: 0.6em;
+     }
+     
+     .form label .email-input:focus + span,
+     .form label .email-input:valid + span {
+         top: 30px;
+         font-size: 0.6em;
+     }
+     
+     .input01 {
+         padding: 15px 15px 25px 15px;
+         font-size: 14px;
+     }
+     
+     .form label .input01 + span {
+         font-size: 0.8em;
+     }
+     
+     .form label .input01:placeholder-shown + span {
+         top: 70px;
+     }
+     
+     .form label .input01:focus + span,
+     .form label .input01:valid + span {
+         top: 80px;
+         font-size: 0.6em;
+     }
+     
+     .fancy {
+         padding: 12px 30px;
+         font-size: 12px;
+     }
+ }
